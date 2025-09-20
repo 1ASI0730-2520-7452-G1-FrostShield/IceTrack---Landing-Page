@@ -195,6 +195,51 @@ section {
     box-shadow: var(--shadow-large);
 }
 
+/* --- About Us Section --- */
+.about-us-section {
+    background-color: var(--bg-light);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    max-width: 450px;
+    text-align: center;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.about-image-placeholder {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    background-color: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+}
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
 
 /* --- Responsive Styles --- */
 @media (max-width: 1024px) {
