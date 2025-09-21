@@ -24,6 +24,11 @@ const translations = {
         benefit_5_desc: "Fortalece la confianza con un servicio proactivo y transparente, mejorando la retención de clientes a largo plazo.",
         benefit_6_title: "Posicionamiento en el Mercado",
         benefit_6_desc: "Diferénciate de la competencia con una solución tecnológica que te permite captar nuevos clientes de forma más efectiva.",
+        about_us_title: "Nuestra Misión y Visión",
+        mission_title: "Misión",
+        mission_desc: "Ofrecemos una plataforma tecnológica para que empresas, técnicos y proveedores gestionen y mantengan sus equipos de refrigeración de manera eficiente. Nuestro objetivo es proteger tu inventario y optimizar tus operaciones.",
+        vision_title: "Visión",
+        vision_desc: "Ser la empresa líder en la gestión y el mantenimiento de equipos de refrigeración en el mercado peruano, comenzando por consolidar nuestra posición en Lima.",
         all_rights_reserved: "Todos los derechos reservados."
     },
     en: {
@@ -51,6 +56,11 @@ const translations = {
         benefit_5_desc: "Build trust with proactive and transparent service, improving long-term client retention.",
         benefit_6_title: "Market Positioning",
         benefit_6_desc: "Differentiate yourself from the competition with a tech solution that helps you acquire new clients more effectively.",
+        about_us_title: "Our Mission and Vision",
+        mission_title: "Mission",
+        mission_desc: "We offer a technology platform for companies, technicians, and suppliers to efficiently manage and maintain their refrigeration equipment. Our goal is to protect your inventory and optimize your operations.",
+        vision_title: "Vision",
+        vision_desc: "To be the leading company in the management and maintenance of refrigeration equipment in the Peruvian market, starting by consolidating our position in Lima.",
         all_rights_reserved: "All rights reserved."
     }
 };
@@ -59,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
     const langEs = document.getElementById('lang-es');
     const langEn = document.getElementById('lang-en');
     const ctaButton = document.getElementById('cta-button');
