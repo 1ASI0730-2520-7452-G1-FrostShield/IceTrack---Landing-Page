@@ -147,3 +147,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const form = document.getElementById("formularioContacto");
+const nombres = document.getElementById("nombres");
+const apellidos = document.getElementById("apellidos");
+const email = document.getElementById("email");
+const asunto = document.getElementById("asunto");
+const mensaje = document.getElementById("mensajeEnviado");
+
+nombres.addEventListener("invalid", () => {
+  if (nombres.validity.valueMissing) {
+    nombres.setCustomValidity("El campo Nombres es obligatorio.");
+  } else {
+    nombres.setCustomValidity("");
+  }
+});
+nombres.addEventListener("input", () => nombres.setCustomValidity(""));
+
+apellidos.addEventListener("invalid", () => {
+  if (apellidos.validity.valueMissing) {
+    apellidos.setCustomValidity("El campo Apellidos es obligatorio.");
+  } else {
+    apellidos.setCustomValidity("");
+  }
+});
+apellidos.addEventListener("input", () => apellidos.setCustomValidity(""));
+
+email.addEventListener("invalid", () => {
+  if (email.validity.valueMissing) {
+    email.setCustomValidity("El campo Correo electrónico es obligatorio.");
+  } else if (email.validity.typeMismatch) {
+    email.setCustomValidity("Por favor, ingrese un correo electrónico válido.");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+email.addEventListener("input", () => email.setCustomValidity(""));
+
+asunto.addEventListener("invalid", () => {
+  if (asunto.validity.valueMissing) {
+    asunto.setCustomValidity("El campo Asunto es obligatorio.");
+  } else {
+    asunto.setCustomValidity("");
+  }
+});
+asunto.addEventListener("input", () => asunto.setCustomValidity(""));
+
+// Envío del formulario
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (form.checkValidity()) {
+    mensaje.style.display = "block";
+    form.reset();
+
+    setTimeout(() => {
+      mensaje.style.display = "none";
+    }, 5000);
+  }
+});
